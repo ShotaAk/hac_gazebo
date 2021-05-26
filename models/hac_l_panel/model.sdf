@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="hac_l_panel">
+    <static>true</static>
+    <link name="panel">
+      <pose>0 0 0.0175 0 0 0</pose>
+      <collision name='collision'>
+        <geometry>
+          <box>
+            <size>0.9 0.9 0.035</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name='visual'>
+        <geometry>
+          <box>
+            <size>0.9 0.9 0.035</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://hac_l_panel/materials/l_panel.material</uri>
+            <name>LPanel</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="HACField">
+    <scene>
+      <shadows>0</shadows>
+    </scene>
+
+    <gui>
+      <camera name="user_camera">
+        <pose>2.7 -5.3 4.5 0 0.64 1.57</pose>
+      </camera>
+    </gui>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <model name="panel1">
+      <include>
+        <uri>model://hac_start_panel</uri>
+      </include>
+      <pose>0 0 0 0 0 0</pose>
+    </model>
+
+    <model name="panel2">
+      <include>
+        <uri>model://hac_l_panel</uri>
+      </include>
+      <pose>0.9 0 0 0 0 3.1416</pose>
+    </model>
+
+    <model name="panel3">
+      <include>
+        <uri>model://hac_ii_panel</uri>
+      </include>
+      <pose>0.9 0.9 0 0 0 1.5708</pose>
+    </model>
+
+    <model name="panel4">
+      <include>
+        <uri>model://hac_ii_panel</uri>
+      </include>
+      <pose>0.9 1.8 0 0 0 1.5708</pose>
+    </model>
+
+    <model name="panel5">
+      <include>
+        <uri>model://hac_ii_panel</uri>
+      </include>
+      <pose>0.9 2.7 0 0 0 1.5708</pose>
+    </model>
+
+    <model name="panel6">
+      <include>
+        <uri>model://hac_u_panel</uri>
+      </include>
+      <pose>0.9 3.6 0 0 0 -1.5708</pose>
+    </model>
+
+  </world>
+</sdf>
