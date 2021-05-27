@@ -1,26 +1,26 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
-  <model name="hac_ball_table_5cm">
+  <model name="hac_ball_table_30cm">
     <static>true</static>
     <link name="link">
       <!-- box half height + tape height(0.0001)-->
-      <pose>0 0 0.0251 0 0 0</pose>
+      <pose>0 0 0.1501 0 0 0</pose>
       <inertial>
-        <mass>0.5</mass>
+        <mass>3.0</mass>
         <inertia>
-          <ixx>5.2083e-04</ixx>
+          <ixx>0.025</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>5.2083e-04</iyy>
+          <iyy>0.025</iyy>
           <iyz>0</iyz>
-          <izz>8.3333e-04</izz>
+          <izz>0.005</izz>
         </inertia>
       </inertial>
 
       <collision name="collision">
         <geometry>
           <box>
-            <size>0.1 0.1 0.05</size>
+            <size>0.1 0.1 0.3</size>
           </box>
         </geometry>
       </collision>
@@ -28,7 +28,7 @@
       <visual name="visual">
         <geometry>
           <box>
-            <size>0.1 0.1 0.05</size>
+            <size>0.1 0.1 0.3</size>
           </box>
         </geometry>
         <material>
@@ -47,7 +47,7 @@
 
     <joint name="joint" type="fixed">
       <parent>hac_blue_tape::link</parent>
-      <child>hac_ball_table_5cm::link</child>
+      <child>hac_ball_table_30cm::link</child>
       <pose>0 0 0 0 0 0</pose>
     </joint>
 

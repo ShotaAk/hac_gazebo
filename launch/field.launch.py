@@ -60,7 +60,8 @@ def generate_launch_description():
                 get_package_share_directory('gazebo_ros'),
                 '/launch/gzserver.launch.py']),
             condition=IfCondition(LaunchConfiguration('server')),
-            launch_arguments={'world': LaunchConfiguration('world_file_name')}.items(),
+            launch_arguments={'world': LaunchConfiguration('world_file_name'),
+                              'pause': 'false'}.items(),
         )
 
     gzclient = IncludeLaunchDescription(

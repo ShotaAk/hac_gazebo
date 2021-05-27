@@ -29,24 +29,24 @@ def generate_launch_description():
             PythonLaunchDescriptionSource([
                 get_package_share_directory('hac_gazebo'),
                 '/launch/field.launch.py']),
-            launch_arguments={'world' : 'field01'}.items()
+            launch_arguments={'world' : 'field02'}.items()
         )
 
     spawn_ball1 = Node(package='gazebo_ros', executable='spawn_entity.py',
                         arguments=['-entity', 'ball1',
-                                   '-x', '2.25', '-y', '0', '-z', '0.1',
+                                   '-x', '1.8', '-y', '-0.45', '-z', '0.1',
                                    '-database', 'hac_orange_ball'],
                         output='screen')
 
     spawn_table1 = Node(package='gazebo_ros', executable='spawn_entity.py',
                         arguments=['-entity', 'table1',
-                                   '-x', '4.65', '-y', '0', '-z', '0.0351',
-                                   '-database', 'hac_ball_table_5cm'],
+                                   '-x', '3.75', '-y', '-0.9', '-z', '0.0351',
+                                   '-database', 'hac_ball_table_30cm'],
                         output='screen')
 
     spawn_ball2 = Node(package='gazebo_ros', executable='spawn_entity.py',
                         arguments=['-entity', 'ball2',
-                                   '-x', '4.65', '-y', '0', '-z', '0.1',
+                                   '-x', '3.75', '-y', '-0.9', '-z', '0.4',
                                    '-database', 'hac_orange_ball'],
                         output='screen')
 
