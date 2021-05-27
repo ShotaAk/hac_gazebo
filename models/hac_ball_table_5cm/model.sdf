@@ -1,8 +1,10 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
   <model name="hac_ball_table_5cm">
+    <static>true</static>
     <link name="link">
-      <pose>0 0 0.025 0 0 0</pose>
+      <!-- box half height + tape height(0.0001)-->
+      <pose>0 0 0.0251 0 0 0</pose>
       <inertial>
         <mass>1.0</mass>
         <inertia>
@@ -32,10 +34,22 @@
         <material>
           <script>
             <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Green</name>
+            <name>Gazebo/Black</name>
           </script>
         </material>
       </visual>
     </link>
+
+    <include>
+      <uri>model://hac_blue_tape</uri>
+      <pose>0 0 0 0 0 1.5708</pose>
+    </include>
+
+    <joint name="joint" type="fixed">
+      <parent>hac_blue_tape::link</parent>
+      <child>hac_ball_table_5cm::link</child>
+      <pose>0 0 0 0 0 0</pose>
+    </joint>
+
   </model>
 </sdf>
