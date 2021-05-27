@@ -2,29 +2,49 @@
 <sdf version="1.5">
   <model name="hac_u_panel">
     <static>true</static>
-    <link name="panel">
-      <pose>0 0 0.0175 0 0 0</pose>
-      <collision name='collision'>
-        <geometry>
-          <box>
-            <size>0.9 0.9 0.035</size>
-          </box>
-        </geometry>
-      </collision>
+    <include>
+      <uri>model://hac_black_panel</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
 
-      <visual name='visual'>
-        <geometry>
-          <box>
-            <size>0.9 0.9 0.035</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>model://hac_u_panel/materials/u_panel.material</uri>
-            <name>UPanel</name>
-          </script>
-        </material>
-      </visual>
-    </link>
+    <include>
+      <uri>model://hac_red_tape</uri>
+      <name>left_tape</name>
+      <!-- panel half width (0.45) - tape half width (0.0075) = 0.04425 -->
+      <pose>0 0.4425 0.035 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://hac_red_tape</uri>
+      <name>right_tape</name>
+      <!-- panel half width (0.45) - tape half width (0.0075) = 0.04425 -->
+      <pose>0 -0.4425 0.035 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://hac_red_tape</uri>
+      <name>bottom_tape</name>
+      <!-- panel half width (0.45) - tape half width (0.0075) = 0.04425 -->
+      <pose>-0.4425 0 0.035 0 0 1.5708</pose>
+    </include>
+
+    <joint name="joint1" type="fixed">
+      <parent>hac_black_panel::link</parent>
+      <child>left_tape::link</child>
+      <pose>0 0 0 0 0 0</pose>
+    </joint>
+
+    <joint name="joint2" type="fixed">
+      <parent>hac_black_panel::link</parent>
+      <child>right_tape::link</child>
+      <pose>0 0 0 0 0 0</pose>
+    </joint>
+
+    <joint name="joint3" type="fixed">
+      <parent>hac_black_panel::link</parent>
+      <child>bottom_tape::link</child>
+      <pose>0 0 0 0 0 0</pose>
+    </joint>
+
   </model>
 </sdf>
