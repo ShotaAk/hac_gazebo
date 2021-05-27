@@ -33,7 +33,7 @@
       <name>white_tape</name>
       <!-- panel half width (0.45) - tape half width (0.0075) = 0.04425 -->
       <!-- -0.4425 + 0.60 = 0.1575 -->
-      <pose>0.1575 0 0.035 0 0 1.5708</pose>
+      <pose>0.1575 0 0.036 0 0 1.5708</pose>
     </include>
 
     <joint name="joint1" type="fixed">
