@@ -3,6 +3,7 @@
 [Humanoid Autonomous Challenge](https://docs.google.com/presentation/d/1vuwCjDXx6wnafV10Z6lkyb3-dfEbjgk4IX_BUWnp6jI/edit?usp=sharing)
 のGazeboモデルパッケージです。
 
+![](./resources/challenge02.jpg)
 ## Requirements
 
 - ROS 2 Foxy
@@ -36,6 +37,8 @@ $ ros2 launch hac_gazebo field.launch.py
 $ ros2 launch hac_gazebo field.launch.py world:=field02
 ```
 
+![](./resources/field01.jpg)
+
 ### Challenge
 
 `challenge**.launch.py`はHACのボールが置かれた競技フィールドを起動します。
@@ -47,3 +50,5 @@ $ ros2 launch hac_gazebo challenge01.launch.py
 
 $ ros2 launch hac_gazebo challenge02.launch.py
 ```
+
+![](./resources/challenge01.jpg)
