@@ -40,7 +40,7 @@ def generate_launch_description():
 
     spawn_table1 = Node(package='gazebo_ros', executable='spawn_entity.py',
                         arguments=['-entity', 'table1',
-                                   '-x', '3.75', '-y', '-0.9', '-z', '0.0351',
+                                   '-x', '3.75', '-y', '-0.9', '-z', '0.03505',
                                    '-database', 'hac_ball_table_30cm'],
                         output='screen')
 
